@@ -12,21 +12,22 @@ object gimenez {
 	}
 	
 	method saldarDeuda(){
-		if (deuda<sueldo){
-			dinero=sueldo-deuda
+		if (self.totalDeuda()<self.sueldo()){
+			dinero=self.sueldo()-self.totalDeuda()
+			deuda=0
 		}
 		else{
-			deuda-=sueldo
+			deuda-=self.sueldo()
 		}
 	}
 	
 	method gastar(dineroAgastar){
-		if(dineroAgastar<=dinero){
+		if(dineroAgastar<=self.totalDinero()){
 			dinero-=dineroAgastar
 		}
 		
 		else {
-			deuda += dineroAgastar - dinero
+			deuda += dineroAgastar - self.totalDinero()
 			dinero =0
 		}
 	}
