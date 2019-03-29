@@ -12,7 +12,7 @@ test "sueldo de Baigorria y de Gimenez" {
 }
 
 
-test "2"{
+test "2."{
 	gimenez.sueldo(15000)
 	gimenez.gastar(4000)
 	gimenez.gastar(8000)
